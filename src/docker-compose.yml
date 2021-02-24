@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  app:
+  api:
     build:
       args:
         user: $USER
@@ -25,7 +25,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_USER: ${DB_USERNAME}
       SERVICE_TAGS: dev
-      SERVICE_NAME: posgres
+      SERVICE_NAME: postgres
     volumes:   
         - ./docker-compose/postgres:/docker-entrypoint-initdb.d
   nginx:
