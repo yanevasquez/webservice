@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.166090">
-    <testsuite name="Unit" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.166090">
-      <testsuite name="Tests\Unit\CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.166090">
-        <testcase name="test_can_create_new_category" class="Tests\Unit\CategoryTest" classname="Tests.Unit.CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" line="10" assertions="2" time="0.166090"/>
-      </testsuite>
+  <testsuite name="/var/www/tests" tests="3" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.269144">
+    <testsuite name="Tests\Unit\CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" tests="3" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.269144">
+      <testcase name="test_check_if_it_can_store_a_new_category" class="Tests\Unit\CategoryTest" classname="Tests.Unit.CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" line="10" assertions="2" time="0.216787"/>
+      <testcase name="test_check_if_it_can_update_category" class="Tests\Unit\CategoryTest" classname="Tests.Unit.CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" line="20" assertions="2" time="0.029790"/>
+      <testcase name="test_check_if_it_can_delete_category" class="Tests\Unit\CategoryTest" classname="Tests.Unit.CategoryTest" file="/var/www/tests/Unit/CategoryTest.php" line="31" assertions="1" time="0.022567"/>
     </testsuite>
   </testsuite>
 </testsuites>
