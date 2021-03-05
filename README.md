@@ -1,4 +1,6 @@
-### webservices
+
+#### webservices 
+* [Instruction for running PHPUnit tests ](https://github.com/yanevasquez/webservices/blob/master/src/readme.md)
 
 ##### 1. Configure parameters in .env
 ```
@@ -25,7 +27,7 @@ sh build.sh
 http://localhost:3000
 ```
 
-**Run migrations**
+##### Run migrations
 ```sh
 docker-compose exec api php artisan migrate
 ```
@@ -35,20 +37,20 @@ Stop apache server to avoid conflict with nginx:
 ```sh
 sudo systemctl stop apache2
 ```
-Clear cache after modifying .env: 
+##### Clear cache after modifying .env: 
 ```sh
 php artisan config:clear
 php artisan view:clear
 php artisan cache:clear
 ```
-Access permission:
+##### Access permission:
 ```sh
 sudo chmod 777 -R storage/
 ```
-Running application seed:
+##### Running application seed:
 ```
 docker-compose exec api php artisan db:seed
 ```
-Running migrate and seeders:
+##### Running migrate and seeders:
 ```
 docker-compose exec api php artisan migrate:refresh --seed
