@@ -21,7 +21,6 @@ class CategoryController extends Controller
      */
     public function index()
     {
-
         $categories = $this->category->get();
         return response()->json($categories);
     }
@@ -83,7 +82,6 @@ class CategoryController extends Controller
         $category = $this->category->find($id);
         if (!$category)
             return response()->json(['error' => 'Not found'], '404');
-
         $category->delete();
         return response()->json(['sucess' => true], 204);
     }
