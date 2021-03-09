@@ -17,7 +17,7 @@ postgres=# CREATE database_test;
 ##### 3. Run migrations:
 
 ```
-docker-compose exec api php artisan migrate:refresh --seed --env=testing 
+docker-compose exec api php artisan migrate --env=testing 
 ```
 ##### 4. Run tests: 
 ```

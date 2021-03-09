@@ -12,7 +12,7 @@ class CategoryTest extends TestCase
         $category = [
             'title' => $this->faker->word,
         ];
-        $this->postJson('api/categories', $category)
+        $this->postJson('api/v1/categories', $category)
             ->assertStatus(201)
             ->assertJson($category);
     }
@@ -23,7 +23,7 @@ class CategoryTest extends TestCase
         $data = [
             'title' => $this->faker->word
         ];
-        $this->putJson('api/categories/'. $category->id, $data)
+        $this->putJson('api/v1/categories/'. $category->id, $data)
             ->assertStatus(200)
             ->assertJson($data);
     }
@@ -31,7 +31,7 @@ class CategoryTest extends TestCase
     public function test_check_if_it_can_delete_category()
     {
         $category = factory(Category::class)->create();
-        $this->deleteJson('api/categories/' . $category->id)
+        $this->deleteJson('api/v1/categories/' . $category->id)
             ->assertStatus(204);
     }
 }
