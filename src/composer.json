@@ -57,6 +57,7 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],   
+        "tests":"docker-compose exec -T api vendor/bin/phpunit --colors=always --verbose --testdox tests"
     }
 }
