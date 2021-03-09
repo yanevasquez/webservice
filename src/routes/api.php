@@ -10,5 +10,8 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['prefix'=> 'v1', 'namespace'=> 'Api\v1'], function (){
+    Route::resource('categories', 'CategoryController');
 
-Route::resource('categories', 'Api\CategoryController');
+});
+

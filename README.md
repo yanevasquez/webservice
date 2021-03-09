@@ -33,15 +33,15 @@ docker-compose exec api php artisan migrate
 ```
 ##### Useful commands:
 
-Stop apache server to avoid conflict with nginx: 
+###### Stop apache server to avoid conflict with nginx: 
 ```sh
 sudo systemctl stop apache2
 ```
 ###### Clear cache after modifying .env: 
 ```sh
-php artisan config:clear
-php artisan view:clear
-php artisan cache:clear
+docker-compose exec api php artisan config:clear
+docker-compose exec api php artisan view:clear
+docker-compose exec api php artisan cache:clear
 ```
 ###### Access permission:
 ```sh
