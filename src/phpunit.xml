@@ -20,9 +20,9 @@
             <directory suffix=".php">./app</directory>
         </include>
     </coverage>
-    <logging>
+    <!--<logging>
         <junit outputFile="build/unit_report.xml"/>
-    </logging>
+    </logging>-->
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="BCRYPT_ROUNDS" value="4"/>
