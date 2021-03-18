@@ -86,7 +86,7 @@
                 Webservice in progress..
             </div>
             <div class="links">
-                <a href="/api/categories">api/categories</a>
+                <a href="api/v1/categories">api/v1/categories</a>
             </div>
         </div>
     </div>

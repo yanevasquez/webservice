@@ -1,9 +1,12 @@
 ### PHPUnit tests
 
-##### 1. Copy .env to .env.testing:
+##### 1. Copy .env to .env.testing and configure:
 
 ```
-cp .env .env.testing
+composer envtest
+```
+```
+DB_DATABASE=dbtest
 ```
 ##### 2. In the db_webservices container and to create the database:
 
@@ -12,12 +15,14 @@ docker exec -it db_webservices bash
 ```
 ```
 $ psql
-postgres=# CREATE database_test;
+postgres=# CREATE database dbtest;
+postgres=# \q
+bash-5.1# exit
 ```
-##### 3. Run migrations:
+##### 3. Run migrations dbtest:
 
 ```
-docker-compose exec api php artisan migrate --env=testing 
+composer migratest
 ```
 ##### 4. Run tests: 
 ```

@@ -16,44 +16,33 @@ DB_USERNAME=postgres
 DB_PASSWORD=postgres
 PGUSER=postgres
 ```
-##### 2. Run the script to build a container 
+##### 2. Build a container:
 
 ```sh
 cd src/
 sh build.sh
 ```
-##### 3. Api running at
+##### 3. Api running at:
 ```sh
 http://localhost:3000
 ```
 
-##### Run migrations
+##### 4. Run migrations and seeders:
 ```sh
-docker-compose exec api php artisan migrate
+composer migraseeds
 ```
 ##### Useful commands:
 
+###### Clear cache after modifying .env: 
+```sh
+composer clear
+```
 ###### Stop apache server to avoid conflict with nginx: 
 ```sh
 sudo systemctl stop apache2
-```
-###### Clear cache after modifying .env: 
-```sh
-docker-compose exec api php artisan config:clear
-docker-compose exec api php artisan view:clear
-docker-compose exec api php artisan cache:clear
 ```
 ###### Access permission:
 ```sh
 sudo chmod 777 -R storage/
 ```
-###### Running seeders:
-```
-docker-compose exec api php artisan db:seed
-```
-###### Running migrate and seeders:
-```
-docker-compose exec api php artisan migrate:refresh --seed
-```
-
 ....
