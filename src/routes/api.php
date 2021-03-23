@@ -12,6 +12,7 @@
 */
 Route::group(['prefix'=> 'v1', 'namespace'=> 'Api\v1'], function (){
     Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductController');
 
 });
 
