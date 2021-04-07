@@ -63,6 +63,7 @@
         "migrafresh": "docker-compose exec -T api php artisan migrate:refresh --seed",
         "clear": "docker-compose exec -T api php artisan config:clear && docker-compose exec -T api php artisan view:clear && docker-compose exec -T api php artisan cache:clear",
         "envtest": "cp .env .env.testing",
-        "migratest": "docker-compose exec -T api php artisan migrate --env=testing"
+        "migratest": "docker-compose exec -T api php artisan migrate --env=testing",
+        "freshtest": "docker-compose exec -T api php artisan migrate:refresh --env=testing"
     }
 }
