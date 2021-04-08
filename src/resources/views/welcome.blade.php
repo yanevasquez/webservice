@@ -57,7 +57,7 @@
             font-weight: 600;
             letter-spacing: .1rem;
             text-decoration: none;
-            text-align: left;
+            text-align: center;
         }
 
         .m-b-md {
@@ -88,6 +88,7 @@
             <div class="links">
                 <a href="api/v1/categories">api/v1/categories</a>
                 <a href="api/v1/products">api/v1/products</a>
+                <a href='api/v1/categories/1/products'>api/v1/categories/1/products</a>
             </div>
         </div>
     </div>

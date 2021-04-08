@@ -10,10 +10,10 @@ class ProductController extends Controller
 {
 
     private $product;
-    
+
     public function __construct(Product $product)
     {
-        $this->product=$product;
+        $this->product = $product;
     }
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product= $this->product->create($request->all());
+        $product = $this->product->create($request->all());
         return response()->json($product, 201);
     }
 
@@ -46,7 +46,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = $this->product->find($id);
+        $product = $this->product->with(['category'])->find($id);
         if (!$product)
             return response()->json(['error' => 'Not found'], '404');
         return response()->json($product);
